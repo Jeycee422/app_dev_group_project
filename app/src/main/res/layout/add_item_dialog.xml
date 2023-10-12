@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/white"
+    app:contentPadding="24dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_bold"
+                android:text="Add New Item"
+                android:textSize="24sp" />
+            <RelativeLayout
+                android:id="@+id/exit_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/exit_bg"
+                android:gravity="center">
+                <TextView
+                    android:layout_height="18dp"
+                    android:layout_width="18dp"
+                    android:background="@drawable/clear"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item name"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/inter_medium"/>
+
+            <EditText
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_border"
+                android:hint="-"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingStart="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/inter_medium"/>
+                <EditText
+                    android:id="@+id/item_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_border"
+                    android:hint="-"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:paddingStart="18dp" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unit"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/inter_medium"/>
+                <EditText
+                    android:id="@+id/item_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_border"
+                    android:hint="-"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:paddingStart="18dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/inter_medium"/>
+
+            <EditText
+                android:id="@+id/item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_border"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:paddingStart="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/inter_medium"/>
+
+            <EditText
+                android:id="@+id/item_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_border"
+                android:hint="Enter a description..."
+                android:inputType="textMultiLine"
+                android:gravity="start"
+                android:lines="4"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_item_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:gravity="center"
+            android:paddingVertical="16dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_medium"
+            android:background="@drawable/button_border"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
