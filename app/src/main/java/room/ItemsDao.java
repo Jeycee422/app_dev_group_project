@@ -22,6 +22,6 @@ public interface ItemsDao {
     @Query("DELETE FROM items WHERE category_id = :category_id")
     void deleteAllItems(int category_id);
 
-    @Query("SELECT * FROM items WHERE category_id = :category_id ORDER BY item_id ASC")
+    @Query("SELECT * FROM items WHERE category_id = :category_id ORDER BY item_id DESC")
     LiveData<List<Items>> getAllItems(int category_id);
 }

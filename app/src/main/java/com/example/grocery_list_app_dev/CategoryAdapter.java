@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ import room.Category;
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryHolder> {
     private List<Category> categories = new ArrayList<>();
     private Application application;
+    private CategoryViewModel categoryViewModel;
     @NonNull
     @Override
     public CategoryHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,8 +34,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return new CategoryHolder(view);
     }
 
-    public CategoryAdapter(Application application) {
+    public CategoryAdapter(Application application,CategoryViewModel categoryViewModel) {
         this.application = application;
+        this.categoryViewModel = categoryViewModel;
     }
 
     @Override
@@ -66,6 +69,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         private TextView categoryDesc;
         private MaterialCardView categoryCard;
         private TextView categoryItem;
+        private LinearLayout delete_list;
         public CategoryHolder(@NonNull View itemView) {
             super(itemView);
             categoryName = itemView.findViewById(R.id.category_name);
@@ -73,6 +77,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             categoryDesc = itemView.findViewById(R.id.category_desc);
             itemsCount = itemView.findViewById(R.id.category_item_count);
             categoryCard = itemView.findViewById(R.id.category_materialCard);
+            delete_list = itemView.findViewById(R.id.delete_list);
+
+            delete_list.setOnClickListener(v -> {
+                categoryViewModel.deleteCategoryAsync(categories.get(getAdapterPosition()));
+            });
         }
     }
 

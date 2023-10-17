@@ -96,7 +96,7 @@ public class CategoryList extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerView.addItemDecoration(new SpacesItemDecoration(16));
         recyclerView.setHasFixedSize(true);
-        final CategoryAdapter adapter = new CategoryAdapter(getApplication());
+        final CategoryAdapter adapter = new CategoryAdapter(getApplication(),categoryViewModel);
         recyclerView.setAdapter(adapter);
 
         LinearLayout linearLayout = findViewById(R.id.list_splash);

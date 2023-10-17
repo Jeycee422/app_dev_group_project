@@ -96,6 +96,9 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemsHolder>
         this.items = items;
         notifyDataSetChanged();
     }
+    public Items getItemAt(int position) {
+        return items.get(position);
+    }
 
     class ItemsHolder extends RecyclerView.ViewHolder {
 
