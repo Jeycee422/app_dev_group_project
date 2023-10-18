@@ -12,7 +12,7 @@
         <item name="shapeAppearanceOverlay">@style/FabShapeStyle</item>
     </style>
 
-    <style name="FabShapeStyle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="FabShapeStyle" parent="ShapeAppearance.MaterialComponents.LargeComponent">
         <item name="cornerSize">50%</item>
     </style>
 </resources>

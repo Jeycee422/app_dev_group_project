@@ -96,7 +96,6 @@ public class GroceryList extends AppCompatActivity {
         deleteAll = findViewById(R.id.delete_all);
         deleteAll.setOnClickListener(v -> {
             glViewModel.deleteAllItemsAsync(category_id);
-            linearLayout.setVisibility(View.VISIBLE);
         });
 
         add_btn = dialog.findViewById(R.id.add_item_btn);
@@ -130,6 +129,8 @@ public class GroceryList extends AppCompatActivity {
             public void onChanged(List<Items> items) {
                 if(!items.isEmpty()) {
                     linearLayout.setVisibility(View.GONE);
+                }else {
+                    linearLayout.setVisibility(View.VISIBLE);
                 }
 
                 int itemCount = items.size();
