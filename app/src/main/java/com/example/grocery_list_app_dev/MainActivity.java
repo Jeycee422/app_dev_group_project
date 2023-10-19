@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText username;
     private TextView login_button;
     private EditText email;
-    private int selected_avatar_id;
+    private int selected_avatar_id = R.drawable.einstein;
     private MainViewModel mainViewModel;
     private SessionManagement sessionManagement;
 

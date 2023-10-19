@@ -10,7 +10,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.Executors;
 
-@Database(entities = {Items.class,Category.class,User.class},version = 2,exportSchema = false)
+@Database(entities = {Items.class,Category.class,User.class},version = 6git status,exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
     private static RoomDB instance;
 
