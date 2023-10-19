@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Random;
 
 import room.Category;
+import room.User;
 
 public class CategoryList extends AppCompatActivity {
 
@@ -33,6 +34,7 @@ public class CategoryList extends AppCompatActivity {
     private Dialog dialog;
     private FloatingActionButton fab;
     private CategoryViewModel categoryViewModel;
+    private MainViewModel mainViewModel;
     private RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,21 +42,21 @@ public class CategoryList extends AppCompatActivity {
         setContentView(R.layout.activity_category_list);
 
         categoryViewModel = new ViewModelProvider(this).get(CategoryViewModel.class);
-
-        int[] avatar = {R.drawable.afro,R.drawable.avocado,R.drawable.away_face,R.drawable.builder,R.drawable.einstein,R.drawable.female_one,R.drawable.marilyn,R.drawable.muslim};
-        avatarRandom = new Random().nextInt(avatar.length);
+        mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         TextView userText = findViewById(R.id.fullname);
         TextView emailText = findViewById(R.id.email_address);
         TextView profile_pic = findViewById(R.id.profile_avatar);
 
-        Intent intent = getIntent();
-        String username = intent.getStringExtra("username");
-        String email = intent.getStringExtra("email");
+        mainViewModel.getUser().observe(this, new Observer<List<User>>() {
+            @Override
+            public void onChanged(List<User> users) {
+                userText.setText(users.get(0).getUsername());
+                emailText.setText(users.get(0).getEmail());
+                profile_pic.setBackgroundResource(users.get(0).getAvatar());
+            }
+        });
 
-        userText.setText(username);
-        emailText.setText(email);
-        profile_pic.setBackgroundResource(avatar[avatarRandom]);
 
         dialog = new Dialog(CategoryList.this);
         dialog.setContentView(R.layout.add_list_dialog);
@@ -114,17 +116,6 @@ public class CategoryList extends AppCompatActivity {
         });
 
 
-
-        if(savedInstanceState != null) {
-            int random_avatar = savedInstanceState.getInt("random_avatar");
-            profile_pic.setBackgroundResource(avatar[random_avatar]);
-        }
-
-    }
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
-        outState.putInt("random_avatar",avatarRandom);
     }
     @Override
     public void onBackPressed() {

@@ -11,6 +11,8 @@ import java.util.concurrent.CompletableFuture;
 
 import room.Items;
 import room.ItemsRepository;
+import room.User;
+import room.UserRepository;
 
 public class GLViewModel extends AndroidViewModel {
     private final ItemsRepository itemsRepository;

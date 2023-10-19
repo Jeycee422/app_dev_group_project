@@ -25,6 +25,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/inter_bold"
                 android:text="Add New List"
+                android:textColor="@color/gray_700"
                 android:textSize="24sp" />
             <RelativeLayout
                 android:id="@+id/exit_btn"
@@ -45,12 +46,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="List name"
                 android:layout_marginBottom="4dp"
-                android:fontFamily="@font/inter_medium"/>
+                android:fontFamily="@font/inter_medium"
+                android:text="List name"
+                android:textColor="@color/gray_700" />
 
             <EditText
                 android:id="@+id/list_name"
@@ -68,12 +71,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
                 android:layout_marginBottom="4dp"
-                android:fontFamily="@font/inter_medium"/>
+                android:fontFamily="@font/inter_medium"
+                android:text="Description"
+                android:textColor="@color/gray_700" />
 
             <EditText
                 android:id="@+id/list_desc"

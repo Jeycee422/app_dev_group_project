@@ -25,6 +25,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/inter_bold"
                 android:text="Add New Item"
+                android:textColor="@color/gray_700"
                 android:textSize="24sp" />
             <RelativeLayout
                 android:id="@+id/exit_btn"
@@ -45,12 +46,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Item name"
                 android:layout_marginBottom="4dp"
-                android:fontFamily="@font/inter_medium"/>
+                android:fontFamily="@font/inter_medium"
+                android:text="Item name"
+                android:textColor="@color/gray_700" />
 
             <EditText
                 android:id="@+id/item_name"
@@ -73,12 +76,14 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Quantity"
                     android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/inter_medium"/>
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Quantity"
+                    android:textColor="@color/gray_700" />
                 <EditText
                     android:id="@+id/item_qty"
                     android:layout_width="match_parent"
@@ -98,12 +103,14 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Unit"
                     android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/inter_medium"/>
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Unit"
+                    android:textColor="@color/gray_700" />
                 <EditText
                     android:id="@+id/item_unit"
                     android:layout_width="match_parent"
@@ -122,12 +129,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price"
                 android:layout_marginBottom="4dp"
-                android:fontFamily="@font/inter_medium"/>
+                android:fontFamily="@font/inter_medium"
+                android:text="Price"
+                android:textColor="@color/gray_700" />
 
             <EditText
                 android:id="@+id/item_price"
@@ -144,12 +153,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
                 android:layout_marginBottom="4dp"
-                android:fontFamily="@font/inter_medium"/>
+                android:fontFamily="@font/inter_medium"
+                android:text="Description"
+                android:textColor="@color/gray_700" />
 
             <EditText
                 android:id="@+id/item_desc"

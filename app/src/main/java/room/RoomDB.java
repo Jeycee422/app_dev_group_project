@@ -10,12 +10,13 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.Executors;
 
-@Database(entities = {Items.class,Category.class},version = 2,exportSchema = false)
+@Database(entities = {Items.class,Category.class,User.class},version = 2,exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
     private static RoomDB instance;
 
     public abstract ItemsDao itemsDao();
     public abstract CategoryDao categoryDao();
+    public abstract UserDao userDao();
 
     public static synchronized RoomDB getInstance(Context context) {
         if(instance == null) {
