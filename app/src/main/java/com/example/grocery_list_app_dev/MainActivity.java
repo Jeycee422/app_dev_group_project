@@ -50,7 +50,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Enter your email", Toast.LENGTH_SHORT).show();
             }else {
                 mainViewModel.insertUserAsync(new User(capitalizeWords(username.getText().toString()),email.getText().toString().trim(),selected_avatar_id));
-                sessionManagement.saveSession(new User(capitalizeWords(username.getText().toString()),email.getText().toString().trim(),selected_avatar_id));
+                mainViewModel.getUser().observe(this, new Observer<List<User>>() {
+                    @Override
+                    public void onChanged(List<User> users) {
+                        if(!users.isEmpty()) {
+                            sessionManagement.saveSession(users.get(0));
+                        }
+                    }
+                });
                 startActivity(new Intent(MainActivity.this,CategoryList.class));
             }
         });
@@ -94,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
         if(ID != -1) {
             startActivity(new Intent(MainActivity.this,CategoryList.class));
         }
+    }
+    @Override
+    public void onBackPressed() {
+
     }
 
     public static String capitalizeWords(String input) {

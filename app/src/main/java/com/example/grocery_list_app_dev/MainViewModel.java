@@ -26,4 +26,8 @@ public class MainViewModel extends AndroidViewModel {
     }
 
     public LiveData<List<User>> getUser() {return userRepository.getUser();}
+
+    public void deleteUser() {
+        userRepository.deleteUser();
+    }
 }

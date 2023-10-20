@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/white"
+    app:contentPadding="24dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_bold"
+                android:text="Update Profile"
+                android:textColor="@color/gray_700"
+                android:textSize="24sp" />
+            <RelativeLayout
+                android:id="@+id/exit_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/exit_bg"
+                android:gravity="center">
+                <TextView
+                    android:layout_height="18dp"
+                    android:layout_width="18dp"
+                    android:background="@drawable/clear"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="Avatar"
+            android:textColor="@color/gray_700" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:paddingVertical="10dp"
+            android:scrollbars="none">
+            <RadioGroup
+                android:id="@+id/avatar_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_one_selected"/>
+
+                <RadioButton
+                    android:id="@+id/radio_2"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_two_selected"/>
+
+                <RadioButton
+                    android:id="@+id/radio_3"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_three_selected"/>
+                <RadioButton
+                    android:id="@+id/radio_4"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_four_selected"/>
+                <RadioButton
+                    android:id="@+id/radio_5"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_five_selected"/>
+                <RadioButton
+                    android:id="@+id/radio_6"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_six_selected"/>
+                <RadioButton
+                    android:id="@+id/radio_7"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_seven_selected"/>
+                <RadioButton
+                    android:id="@+id/radio_8"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:button="@null"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/avatar_eight_selected"/>
+            </RadioGroup>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Username"
+                android:textColor="@color/gray_700" />
+
+            <EditText
+                android:id="@+id/username_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_border"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingStart="18dp"
+                android:textColor="@color/gray_700"
+                android:textColorHint="@color/gray_300" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Email"
+                android:textColor="@color/gray_700" />
+
+            <EditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_border"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:paddingStart="18dp"
+                android:textColor="@color/gray_700"
+                android:textColorHint="@color/gray_300" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/update_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:gravity="center"
+            android:paddingVertical="16dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_medium"
+            android:background="@drawable/button_border"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

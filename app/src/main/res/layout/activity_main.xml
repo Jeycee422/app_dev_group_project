@@ -20,11 +20,9 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="48dp"
         android:orientation="vertical"
-        android:padding="30dp"
+        android:paddingHorizontal="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +42,7 @@
             android:layout_marginBottom="25dp"
             android:paddingVertical="10dp"
             android:scrollbars="none">
+
             <RadioGroup
                 android:id="@+id/avatar_group"
                 android:layout_width="wrap_content"
@@ -54,61 +53,66 @@
                     android:id="@+id/radio_1"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
-                    android:checked="true"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_one_selected"/>
+                    android:background="@drawable/avatar_one_selected"
+                    android:button="@null"
+                    android:checked="true" />
 
                 <RadioButton
                     android:id="@+id/radio_2"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_two_selected"/>
+                    android:background="@drawable/avatar_two_selected"
+                    android:button="@null" />
 
                 <RadioButton
                     android:id="@+id/radio_3"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_three_selected"/>
+                    android:background="@drawable/avatar_three_selected"
+                    android:button="@null" />
+
                 <RadioButton
                     android:id="@+id/radio_4"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_four_selected"/>
+                    android:background="@drawable/avatar_four_selected"
+                    android:button="@null" />
+
                 <RadioButton
                     android:id="@+id/radio_5"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_five_selected"/>
+                    android:background="@drawable/avatar_five_selected"
+                    android:button="@null" />
+
                 <RadioButton
                     android:id="@+id/radio_6"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_six_selected"/>
+                    android:background="@drawable/avatar_six_selected"
+                    android:button="@null" />
+
                 <RadioButton
                     android:id="@+id/radio_7"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_seven_selected"/>
+                    android:background="@drawable/avatar_seven_selected"
+                    android:button="@null" />
+
                 <RadioButton
                     android:id="@+id/radio_8"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:button="@null"
                     android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/avatar_eight_selected"/>
+                    android:background="@drawable/avatar_eight_selected"
+                    android:button="@null" />
             </RadioGroup>
 
         </HorizontalScrollView>
@@ -130,7 +134,8 @@
             android:ems="10"
             android:inputType="text"
             android:padding="10dp"
-            android:paddingStart="15dp" />
+            android:paddingStart="15dp"
+            android:textColor="@color/gray_700" />
 
         <TextView
             android:layout_width="match_parent"
@@ -149,7 +154,8 @@
             android:ems="10"
             android:inputType="text"
             android:padding="10dp"
-            android:paddingStart="15dp" />
+            android:paddingStart="15dp"
+            android:textColor="@color/gray_700" />
 
         <!--        <TextView-->
         <!--            android:id="@+id/textView3"-->

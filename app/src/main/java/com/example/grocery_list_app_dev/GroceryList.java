@@ -79,6 +79,11 @@ public class GroceryList extends AppCompatActivity {
 
         exit_btn = dialog.findViewById(R.id.exit_btn);
         exit_btn.setOnClickListener(v -> {
+            item_name.setText("");
+            item_qty.setText("");
+            item_unit.setText("");
+            item_price.setText("");
+            item_desc.setText("");
             dialog.dismiss();
         });
 

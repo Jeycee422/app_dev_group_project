@@ -63,7 +63,9 @@
                 android:hint="-"
                 android:inputType="text"
                 android:padding="10dp"
-                android:paddingStart="18dp" />
+                android:paddingStart="18dp"
+                android:textColor="@color/gray_700"
+                android:textColorHint="@color/gray_300" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,6 +86,7 @@
                     android:fontFamily="@font/inter_medium"
                     android:text="Quantity"
                     android:textColor="@color/gray_700" />
+
                 <EditText
                     android:id="@+id/item_qty"
                     android:layout_width="match_parent"
@@ -92,7 +95,9 @@
                     android:hint="-"
                     android:inputType="numberDecimal"
                     android:padding="10dp"
-                    android:paddingStart="18dp" />
+                    android:paddingStart="18dp"
+                    android:textColor="@color/gray_700"
+                    android:textColorHint="@color/gray_300" />
 
             </LinearLayout>
             <View
@@ -111,6 +116,7 @@
                     android:fontFamily="@font/inter_medium"
                     android:text="Unit"
                     android:textColor="@color/gray_700" />
+
                 <EditText
                     android:id="@+id/item_unit"
                     android:layout_width="match_parent"
@@ -119,7 +125,9 @@
                     android:hint="-"
                     android:inputType="numberDecimal"
                     android:padding="10dp"
-                    android:paddingStart="18dp" />
+                    android:paddingStart="18dp"
+                    android:textColor="@color/gray_700"
+                    android:textColorHint="@color/gray_300" />
 
             </LinearLayout>
         </LinearLayout>
@@ -143,9 +151,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_border"
-                android:padding="10dp"
+                android:hint="$"
                 android:inputType="numberDecimal"
-                android:paddingStart="18dp" />
+                android:padding="10dp"
+                android:paddingStart="18dp"
+                android:textColor="@color/gray_700"
+                android:textColorHint="@color/gray_300" />
         </LinearLayout>
 
         <LinearLayout
@@ -167,14 +178,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_border"
-                android:hint="Enter a description..."
-                android:inputType="textMultiLine"
                 android:gravity="start"
+                android:hint="Enter description..."
+                android:inputType="textMultiLine"
                 android:lines="4"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
                 android:paddingStart="18dp"
-                android:paddingEnd="18dp"/>
+                android:paddingTop="10dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/gray_700"
+                android:textColorHint="@color/gray_300" />
         </LinearLayout>
 
         <TextView

@@ -15,4 +15,7 @@
     <color name="purp_100">#ede9fe</color>
     <color name="gray_50">#f9fafb</color>
     <color name="gray_25">#FCFCFD</color>
+    <color name="red_500">#f87171</color>
+    <color name="red_100">#fee2e2</color>
+    <color name="red_50">#fef2f2</color>
 </resources>

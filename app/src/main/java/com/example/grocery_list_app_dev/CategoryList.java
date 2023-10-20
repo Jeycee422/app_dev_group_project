@@ -51,9 +51,11 @@ public class CategoryList extends AppCompatActivity {
         mainViewModel.getUser().observe(this, new Observer<List<User>>() {
             @Override
             public void onChanged(List<User> users) {
-                userText.setText(users.get(0).getUsername());
-                emailText.setText(users.get(0).getEmail());
-                profile_pic.setBackgroundResource(users.get(0).getAvatar());
+                if(!users.isEmpty()) {
+                    userText.setText(users.get(0).getUsername());
+                    emailText.setText(users.get(0).getEmail());
+                    profile_pic.setBackgroundResource(users.get(0).getAvatar());
+                }
             }
         });
 
@@ -68,14 +70,16 @@ public class CategoryList extends AppCompatActivity {
         fab.setOnClickListener(v -> {
             dialog.show();
         });
+        TextView listName = dialog.findViewById(R.id.list_name);
+        TextView listDesc = dialog.findViewById(R.id.list_desc);
 
         RelativeLayout exit_btn = dialog.findViewById(R.id.exit_btn);
         exit_btn.setOnClickListener(v -> {
+            listName.setText("");
+            listDesc.setText("");
             dialog.dismiss();
         });
 
-        TextView listName = dialog.findViewById(R.id.list_name);
-        TextView listDesc = dialog.findViewById(R.id.list_desc);
 
         TextView addListBtn = dialog.findViewById(R.id.add_list_btn);
         addListBtn.setOnClickListener(v -> {
@@ -92,6 +96,11 @@ public class CategoryList extends AppCompatActivity {
         LinearLayout clearAll = findViewById(R.id.clear_all);
         clearAll.setOnClickListener(v -> {
             categoryViewModel.deleteAllCategoryAsync();
+        });
+
+
+        profile_pic.setOnClickListener(v -> {
+            startActivity(new Intent(this, UserProfile.class));
         });
 
         recyclerView = findViewById(R.id.category_container);

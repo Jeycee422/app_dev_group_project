@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Grocery_list_app_dev"
         tools:targetApi="31">
         <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
             android:name=".CategoryList"
             android:exported="false" />
         <activity

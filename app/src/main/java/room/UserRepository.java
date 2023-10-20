@@ -29,4 +29,7 @@ public class UserRepository {
         CompletableFuture.runAsync(() -> userDao.delete(user),executorService);
     }
     public LiveData<List<User>> getUser() { return user;}
+    public void deleteUser() {
+        CompletableFuture.runAsync(userDao::deleteUser,executorService);
+    }
 }

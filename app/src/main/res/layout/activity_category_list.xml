@@ -116,7 +116,7 @@
         android:fontFamily="@font/inter_bold"
         android:text="My List"
         android:textColor="@color/gray_700"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
