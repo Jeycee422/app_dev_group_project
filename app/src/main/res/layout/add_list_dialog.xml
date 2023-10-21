@@ -58,7 +58,7 @@
             <EditText
                 android:id="@+id/list_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:background="@drawable/input_border"
                 android:hint="-"
                 android:inputType="text"
@@ -86,7 +86,7 @@
             <EditText
                 android:id="@+id/list_desc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:background="@drawable/input_border"
                 android:gravity="start"
                 android:hint="Enter description..."
