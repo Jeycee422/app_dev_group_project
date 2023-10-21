@@ -147,12 +147,12 @@ public class UserProfile extends AppCompatActivity {
                 mainViewModel.updateUserAsync(user);
                 updateDialog.dismiss();
             } else if (emailUpdate.getText().toString().equals("")) {
-                User user = new User(usernameUpdate.getText().toString(),emailUpdate.getHint().toString(),selected_avatar_id);
+                User user = new User(capitalizeWords(usernameUpdate.getText().toString()),emailUpdate.getHint().toString(),selected_avatar_id);
                 user.setUser_id(id);
                 mainViewModel.updateUserAsync(user);
                 updateDialog.dismiss();
             } else {
-                User user = new User(usernameUpdate.getText().toString(),emailUpdate.getText().toString(),selected_avatar_id);
+                User user = new User(capitalizeWords(usernameUpdate.getText().toString()),emailUpdate.getText().toString(),selected_avatar_id);
                 user.setUser_id(id);
                 mainViewModel.updateUserAsync(user);
                 updateDialog.dismiss();
@@ -222,5 +222,22 @@ public class UserProfile extends AppCompatActivity {
                 }
             }
         });
+    }
+    public static String capitalizeWords(String input) {
+        // Split the input string into words based on spaces
+        String[] words = input.split(" ");
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                // Capitalize the first letter of the word
+                String firstLetter = word.substring(0, 1).toUpperCase();
+                String restOfWord = word.substring(1).toLowerCase();
+                result.append(firstLetter).append(restOfWord).append(" ");
+            }
+        }
+
+        // Remove the trailing space and return the result
+        return result.toString().trim();
     }
 }
