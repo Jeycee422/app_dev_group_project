@@ -135,7 +135,8 @@
             android:inputType="text"
             android:padding="10dp"
             android:paddingStart="15dp"
-            android:textColor="@color/gray_700" />
+            android:textColor="@color/gray_700"
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -152,10 +153,11 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/input_border"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:padding="10dp"
             android:paddingStart="15dp"
-            android:textColor="@color/gray_700" />
+            android:textColor="@color/gray_700"
+            android:textSize="14sp" />
 
         <!--        <TextView-->
         <!--            android:id="@+id/textView3"-->

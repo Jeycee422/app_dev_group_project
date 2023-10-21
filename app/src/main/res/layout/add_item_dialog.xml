@@ -65,7 +65,8 @@
                 android:padding="10dp"
                 android:paddingStart="18dp"
                 android:textColor="@color/gray_700"
-                android:textColorHint="@color/gray_300" />
+                android:textColorHint="@color/gray_300"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -97,7 +98,8 @@
                     android:padding="10dp"
                     android:paddingStart="18dp"
                     android:textColor="@color/gray_700"
-                    android:textColorHint="@color/gray_300" />
+                    android:textColorHint="@color/gray_300"
+                    android:textSize="14sp" />
 
             </LinearLayout>
             <View
@@ -127,7 +129,8 @@
                     android:padding="10dp"
                     android:paddingStart="18dp"
                     android:textColor="@color/gray_700"
-                    android:textColorHint="@color/gray_300" />
+                    android:textColorHint="@color/gray_300"
+                    android:textSize="14sp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -156,7 +159,8 @@
                 android:padding="10dp"
                 android:paddingStart="18dp"
                 android:textColor="@color/gray_700"
-                android:textColorHint="@color/gray_300" />
+                android:textColorHint="@color/gray_300"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -187,7 +191,8 @@
                 android:paddingEnd="18dp"
                 android:paddingBottom="10dp"
                 android:textColor="@color/gray_700"
-                android:textColorHint="@color/gray_300" />
+                android:textColorHint="@color/gray_300"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <TextView

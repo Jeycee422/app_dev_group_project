@@ -136,16 +136,29 @@ public class UserProfile extends AppCompatActivity {
         TextView updateProfile = updateDialog.findViewById(R.id.update_profile);
         updateProfile.setOnClickListener(v -> {
             int id = sessionManagement.getSession();
-            if(usernameUpdate.getText().toString().equals("")) {
-                Toast.makeText(this, "Enter new username", Toast.LENGTH_SHORT).show();
+            if (usernameUpdate.getText().toString().equals("") && emailUpdate.getText().toString().equals("")) {
+                User user = new User(usernameUpdate.getHint().toString(),emailUpdate.getHint().toString(),selected_avatar_id);
+                user.setUser_id(id);
+                mainViewModel.updateUserAsync(user);
+                updateDialog.dismiss();
+            }else if(usernameUpdate.getText().toString().equals("")) {
+                User user = new User(usernameUpdate.getHint().toString(),emailUpdate.getText().toString(),selected_avatar_id);
+                user.setUser_id(id);
+                mainViewModel.updateUserAsync(user);
+                updateDialog.dismiss();
             } else if (emailUpdate.getText().toString().equals("")) {
-                Toast.makeText(this, "Enter new email", Toast.LENGTH_SHORT).show();
-            }else {
+                User user = new User(usernameUpdate.getText().toString(),emailUpdate.getHint().toString(),selected_avatar_id);
+                user.setUser_id(id);
+                mainViewModel.updateUserAsync(user);
+                updateDialog.dismiss();
+            } else {
                 User user = new User(usernameUpdate.getText().toString(),emailUpdate.getText().toString(),selected_avatar_id);
                 user.setUser_id(id);
                 mainViewModel.updateUserAsync(user);
                 updateDialog.dismiss();
             }
+            usernameUpdate.setText("");
+            emailUpdate.setText("");
         });
 
 
